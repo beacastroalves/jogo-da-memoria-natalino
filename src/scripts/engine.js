@@ -24,7 +24,7 @@ shuffledImages.forEach(shuffledImage => {
   const box = document.createElement("div");
   box.className = "item";
   box.dataset.value = shuffledImage;
-  box.innerHTML = `<img src="images/${shuffledImage}.png">`;
+  box.innerHTML = `<img src="./src/images/${shuffledImage}.png">`;
   box.onclick = handleClick;
   document.querySelector(".game").appendChild(box);
 })
