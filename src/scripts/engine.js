@@ -59,6 +59,10 @@ function checkMatch() {
   }
 
   openCards = [];
+
+  if(document.querySelectorAll(".boxMatch").length === natalinos.length) {
+    alert("Você venceu!");
+  }
 }
 
 
