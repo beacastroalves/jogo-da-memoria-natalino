@@ -173,6 +173,12 @@ h2 {
   h2 {
     font-size: 4rem;
   }
+  .reset {
+    padding: 16px;
+    width: 85%;
+    font-size: 2rem;
+   }
+
 }
 
 @media screen and (max-width: 950px){
@@ -195,6 +201,18 @@ h2 {
       max-width: 13vmin;
     }
   }
+}
+
+@media screen and (max-width: 670px){
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .reset {
+    padding: 8px;
+    width: 85%;
+    font-size: 1rem;
+   }
 }
 
 @media screen and (max-width: 450px){
