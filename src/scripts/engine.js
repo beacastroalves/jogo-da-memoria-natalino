@@ -18,7 +18,31 @@ ids.forEach(id => {
   natalinos.push(id);
 })
 
-const shuffledImages = natalinos.sort(() => Math.random() >= 0.5 ? 2 : -1);
+const shuffle = array => {
+  array.sort(() => Math.random() >= 0.5 ? 1 : -1);
+  let hasDuplicate = true;
+  while (hasDuplicate) {
+      hasDuplicate = false;
+      for (let i = 0; i < array.length; ++i) {
+          if (
+            array[i] === array[i + 1] ||
+            array[i] === array[i + 3] ||
+            array[i] === array[i + 4]
+          ) {
+              hasDuplicate = true;
+              let randIndex = Math.floor(Math.random() * array.length);
+              const temp = array[randIndex]
+              array[randIndex] = array[i];
+              array[i] = temp;
+          }
+      }
+  }
+
+  return array;
+};
+
+const shuffledImages = shuffle(natalinos);
+
 
 shuffledImages.forEach(shuffledImage => {
   const box = document.createElement("div");
@@ -67,7 +91,7 @@ function checkMatch() {
 
 
 
-
+// Aplicando ao seu array:
 
 const snowContainer = document.getElementById("snow-container");
 
